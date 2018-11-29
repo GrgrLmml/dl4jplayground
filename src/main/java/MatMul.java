@@ -11,6 +11,10 @@ public class MatMul {
 
 
             INDArray mmul = rnd.mmul(rnd.transpose());
+
+//            workaround
+//            INDArray sum = mmul.add(mmul.transpose());
+//            sum.divi(2);
             boolean isSymetric = testMatSym(mmul);
             if (isSymetric) {
                 System.out.println("matrix is symmetric");

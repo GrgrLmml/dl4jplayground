@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'grgrlmml'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven{
+        url publicUrl
+        credentials {
+            username mavenUser
+            password mavenPassword
+        }
+    }
+}
+
+
+
+dependencies {
+    compile("org.nd4j:nd4j-backends:$dl4j_version")
+    compile("org.nd4j:nd4j-native-platform:$dl4j_version")
+
+//    compile group: 'org.nd4j', name: 'nd4j-cuda-9.0', version: '1.0.0-beta3'
+
+
+// https://mvnrepository.com/artifact/org.slf4j/slf4j-simple
+   compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+}
+

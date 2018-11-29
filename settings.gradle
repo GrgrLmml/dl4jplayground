@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        maven {
+            url publicUrl
+            credentials {
+                username mavenUser
+                password mavenPassword
+            }
+        }
+        gradlePluginPortal() // Include public Gradle plugin portal
+    }
+}
